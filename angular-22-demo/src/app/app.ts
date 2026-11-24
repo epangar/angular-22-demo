@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { Screen } from './components/screen/screen';
-import { Navbar } from './components/navbar/navbar/navbar';
+import { Navbar } from './components/navbar/navbar';
 
 @Component({
   imports: [ Screen, Navbar],
