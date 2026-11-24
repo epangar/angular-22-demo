@@ -2,6 +2,18 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.7.
 
+# Things to try
+
+Standalone components
+@if (x)
+@for (x)
+input.required
+click = output()
+signal()
+@defer
+@inject()
+Lazyloading
+
 ## Development server
 
 To start a local development server, run:
