@@ -2,16 +2,16 @@
 
 
 <ul>
-    @for(num of numArray; track num){
-        <li>
-            @if (num % 15 === 0){
+    @for(num of numArray; track num.value){
+        <li [class]="num.color">
+            @if (num.value % 15 === 0){
                 FizzBuzz    
-            } @else if( num % 5 === 0){
+            } @else if( num.value % 5 === 0){
                 Buzz
-            } @else if( num % 3 === 0){
+            } @else if( num.value % 3 === 0){
                 Fizz
             } @else {
-                {{num}}
+                {{num.value}}
             }
         </li>
     }

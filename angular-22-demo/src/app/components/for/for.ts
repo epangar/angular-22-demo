@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 interface Num {
   value:number;
-  id:string;
+  color:string;
 }
 @Component({
   imports: [],
@@ -12,14 +12,33 @@ interface Num {
 })
 export class For {
 
-  numArray: number[];
+  numArray: Num[];
 
   constructor(){
     this.numArray=this.fillNumArray()
   }
 
-  fillNumArray(): number[]{
+  fillNumArray(): Num[]{
     return new Array(50)
-    .fill(0).map((e:number, p:number)=>p+1)
+    .fill(0).map((e:number, p:number)=>{
+
+      return {
+        value: p+1,
+        color:  this.fillColorArray(p+1)
+      }
+      
+    })
+  }
+
+  fillColorArray(value:number): string{
+    if(value % 15 === 0){
+      return 'red';
+    } else if (value % 5 === 0){
+      return 'green';
+    } else if(value % 3 === 0){
+      return 'orange';
+    } else {
+      return 'blue'
+    }
   }
 }
