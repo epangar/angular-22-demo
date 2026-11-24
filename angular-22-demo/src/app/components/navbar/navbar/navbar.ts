@@ -13,7 +13,6 @@ export class Navbar {
   routes: Route[]
   constructor(){
     this.routes = this.setRoutes(routes);
-    console.log(this.routes)
   }
 
   setRoutes(routes:Route[]): Route[]{
