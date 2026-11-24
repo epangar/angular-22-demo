@@ -1,0 +1,13 @@
+<div class="grid padre">
+    <p>PADRE SIGNAL</p>
+    
+    <p>Child value: {{value}}</p>
+
+    <input type="text" 
+        (keyup)="enviarTextoAHijo($event)">
+    
+    <app-hijo-signal 
+        class="col-5"
+        (emitirClick)="recogerValorHijo($event)"
+        [textoDelPadre]="textoParaHijo()"></app-hijo-signal>
+</div>
